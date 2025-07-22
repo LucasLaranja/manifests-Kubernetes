@@ -15,5 +15,6 @@ spec:
       containers:
       - name: app-projeto
         image: laranja1/app-projeto:latest
+
         ports:
         - containerPort: 80
