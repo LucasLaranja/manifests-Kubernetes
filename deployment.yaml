@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-projeto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-projeto
+  template:
+    metadata:
+      labels:
+        app: app-projeto
+    spec:
+      containers:
+      - name: app-projeto
+        image: DOCKER_USERNAME/app-projeto:latest
+        ports:
+        - containerPort: 80
